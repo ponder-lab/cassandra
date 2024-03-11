@@ -360,7 +360,6 @@ public abstract class CompactionStress implements Runnable
 
     public static void main(String[] args)
     {
-    	System.out.println("CompactionStress run");
         Cli.CliBuilder<Runnable> builder = Cli.<Runnable>builder("compaction-stress")
                                            .withDescription("benchmark for compaction")
                                            .withDefaultCommand(Help.class)
