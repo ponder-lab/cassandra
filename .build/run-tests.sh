@@ -176,7 +176,7 @@ _main() {
   [[ -f "${DIST_DIR}/apache-cassandra-${version}.jar" ]] || [[ -f "${DIST_DIR}/apache-cassandra-${version}-SNAPSHOT.jar" ]] || { echo "Project must be built first. Use \`ant jar\`. Build directory is ${DIST_DIR} with: $(ls ${DIST_DIR})"; exit 1; }
 
   # check if dist artifacts exist, this breaks the dtests
-  [[ -d "${DIST_DIR}/dist" ]] && { echo "tests don't work when build/dist ("${DIST_DIR}/dist") exists (from \`ant artifacts\`)"; exit 1; }
+  # [[ -d "${DIST_DIR}/dist" ]] && { echo "tests don't work when build/dist ("${DIST_DIR}/dist") exists (from \`ant artifacts\`)"; exit 1; }
 
   # ant test setup
   export TMP_DIR="${DIST_DIR}/tmp"

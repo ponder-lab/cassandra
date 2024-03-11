@@ -44,8 +44,8 @@
         When building, javac's source and target flags are set to the jdk used, so lower JDKs are not supported at runtime.
         The use of both CASSANDRA_USE_JDK11 and use-jdk11 is deprecated.
     -->
-    <property name="java.default" value="21" />
-    <property name="java.supported" value="11,17,21" />
+    <property name="java.default" value="11" />
+    <property name="java.supported" value="11,17" />
 
     <!-- directory details -->
     <property name="basedir" value="."/>
@@ -489,8 +489,7 @@
 
     <target name="gen-cql3-grammar" depends="check-gen-cql3-grammar" unless="cql3current">
       <echo>Building Grammar ${build.src.antlr}/Cql.g  ...</echo>
-      <java fork="yes"
-      	    classname="org.antlr.Tool"
+      <java classname="org.antlr.Tool"
             classpathref="cql3-grammar.classpath"
             failonerror="true">
          <arg value="-Xconversiontimeout" />
